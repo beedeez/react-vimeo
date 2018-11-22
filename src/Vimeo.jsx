@@ -48,6 +48,7 @@ export default class extends React.Component {
     loading: PropTypes.element,
     playButton: PropTypes.node,
     playerOptions: PropTypes.object,
+    style: PropTypes.object,
     videoId: PropTypes.string.isRequired,
 
     // event callbacks
@@ -292,7 +293,7 @@ export default class extends React.Component {
 
   render() {
     return (
-      <div className={ this.props.className } >
+      <div className={ this.props.className } style={ this.props.style } >
         { this.renderLoading(this.state.imageLoaded, this.props.loading) }
         { this.renderImage() }
         { this.renderIframe() }
